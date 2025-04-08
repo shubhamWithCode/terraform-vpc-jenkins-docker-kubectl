@@ -65,6 +65,8 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 chmod +x kubectl
 mkdir -p ~/.local/bin
 mv ./kubectl ~/.local/bin/kubectl
+#chekc in realtime if kubectl is installed or not. test on other server is passed but still
+
 # and then append (or prepend) ~/.local/bin to $PATH
 
 sudo apt update -y
