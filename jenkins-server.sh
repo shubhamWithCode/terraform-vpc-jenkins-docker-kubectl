@@ -42,7 +42,7 @@ echo \
 
   # Other installation
 
-sudo sermod -aG docker jenkins
+sudo usermod -aG docker jenkins
 sudo apt install unzip
 
 #*****************Install AWS CLI********************#
@@ -69,6 +69,6 @@ mv ./kubectl ~/.local/bin/kubectl
 
 sudo apt update -y
 
-apt install maven -y
+sudo apt install maven -y
 
 sudo usermod -aG docker jenkins
