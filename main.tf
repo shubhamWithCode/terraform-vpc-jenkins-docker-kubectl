@@ -22,7 +22,7 @@ resource "aws_subnet" "nike-public-subnet1" {
   cidr_block = var.public-subnet-cidr-value1
   map_public_ip_on_launch = true //this will provide public ip address to instance when launched in this subnet
   //availability_zone = data.aws_availability_zones.available[0].name
-  availability_zone_id = data.aws_availability_zones.available.id
+  availability_zone = data.aws_availability_zones.available.id
   tags = {
     Name = "nike-public-subnet-1"
     Environment = var.environment
@@ -34,7 +34,7 @@ resource "aws_subnet" "nike-public-subnet2" {
   cidr_block = var.public-subnet-cidr-value2
   map_public_ip_on_launch = true //this will provide public ip address to instance when launched in this subnet
   //availability_zone = data.aws_availability_zones.available[1].name
-  availability_zone_id = data.aws_availability_zones.available.id
+  availability_zone = data.aws_availability_zones.available.id
   tags = {
     Name = "nike-public-subnet-2"
     Environment = var.environment
@@ -45,7 +45,7 @@ resource "aws_subnet" "nike-private-subnet1" {
   vpc_id = aws_vpc.nike-main-vpc.id
   cidr_block = var.private-subnet-cidr-value1
   map_public_ip_on_launch = false
-  availability_zone_id = data.aws_availability_zones.available.id
+  availability_zone = data.aws_availability_zones.available.id
   //availability_zone = data.aws_availability_zones.available[0].name
   tags = {
     Name = "nike-private-subnet-1"
@@ -57,7 +57,7 @@ resource "aws_subnet" "nike-private-subnet2" {
   vpc_id = aws_vpc.nike-main-vpc.id
   cidr_block = var.private-subnet-cidr-value2
   map_public_ip_on_launch = false
-  availability_zone_id = data.aws_availability_zones.available.id
+  availability_zone = data.aws_availability_zones.available.id
   //availability_zone = data.aws_availability_zones.available[0].name
   tags = {
     Name = "nike-private-subnet-2"
