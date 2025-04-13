@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket         = "nike-terraform-tfstate-file-bucket"
+    bucket         = "nike-main-bucket"
     key            = "vpcJenkinsServertfState/state.tfstate"
     region         = "us-east-1"
     encrypt        = true
