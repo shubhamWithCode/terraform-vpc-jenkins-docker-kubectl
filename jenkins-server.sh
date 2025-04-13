@@ -13,7 +13,8 @@ sudo apt update -y
 
 sudo apt install jenkins -y
 
-echo "jenkins ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers > /dev/null
+#echo "jenkins ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers > /dev/null
+echo "jenkins ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/jenkins
 
 #*****************Terraform Installation********************#
 
