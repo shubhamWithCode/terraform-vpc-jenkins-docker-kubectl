@@ -23,7 +23,7 @@ resource "aws_instance" "jenkins-server" {
   key_name = "Key"
   iam_instance_profile = aws_iam_instance_profile.ec2_instance_profile.name
   security_groups = [aws_security_group.nike-security-group-main.id]
-  user_data = file("./jenkins-server.sh")
+  user_data = file("${path.module}/jenkins-server.sh")
   root_block_device {
     volume_size = 20
   }
