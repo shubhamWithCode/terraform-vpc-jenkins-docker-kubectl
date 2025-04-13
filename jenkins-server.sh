@@ -1,3 +1,4 @@
+#!/bin/bash
 #*****************Jenkins Installation********************#
 
 sudo apt update && sudo apt upgrade -y
